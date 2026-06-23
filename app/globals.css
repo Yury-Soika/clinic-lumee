@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #fbf9f6;
+  --sand: #f1eae1;
+  --taupe: #b0906f;
+  --bronze: #9a7b57;
+  --charcoal: #2a2722;
+  --stone: #6f6a62;
+  --sage: #8c9a8e;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-sand: var(--sand);
+  --color-taupe: var(--taupe);
+  --color-bronze: var(--bronze);
+  --color-charcoal: var(--charcoal);
+  --color-stone: var(--stone);
+  --color-sage: var(--sage);
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button:not(:disabled),
+select,
+input[type="date"] {
+  cursor: pointer;
+}
+
+.eyebrow {
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  background: var(--bronze);
+  bottom: -3px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: width .3s;
+  width: 0;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
